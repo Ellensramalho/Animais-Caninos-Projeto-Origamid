@@ -31,3 +31,13 @@ h1.addEventListener('mouseout', handleEvent);
 h1.addEventListener('mousemove', handleEvent);
 window.addEventListener('scroll', handleEvent);
 window.addEventListener('resize', handleEvent);
+
+function handleKeyboard(e){
+  if(e.key === 'a'){
+   document.body.classList.toggle('azul')
+  }
+  else if(e.key === 'v'){
+    document.body.classList.toggle('rosa')
+  }
+}
+window.addEventListener('keydown', handleKeyboard);

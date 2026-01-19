@@ -32,7 +32,13 @@ body{
   flex-wrap: wrap;
   padding: 10px;
 }
+.azul{
+  background: aqua;
+}
 
+.rosa{
+  background: pink;
+}
 .menu li a{
   display: block;
   padding: 10px;
