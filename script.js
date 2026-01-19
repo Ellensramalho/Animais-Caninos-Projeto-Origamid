@@ -30,3 +30,11 @@ novoh1.innerHTML = 'Caninos são fofos';
 novoh1.classList.add('titulo');
 
 mapa.appendChild(novoh1);
+
+const h1 = document.querySelector('h1');
+const faq = document.querySelector('.faq');
+
+const cloneTitulo = h1.cloneNode(true);
+
+cloneTitulo.classList.add('azul');
+faq.appendChild(cloneTitulo);
