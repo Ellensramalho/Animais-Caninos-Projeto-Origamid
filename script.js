@@ -16,6 +16,7 @@ tabMenu.forEach((itemMenu, index) => {
 });
 }
 initTabNav();
+
 function initAccordion(){
 const accordionList = document.querySelectorAll('.js-accordion dt');
 accordionList[0].classList.add('ativo');
@@ -31,3 +32,22 @@ accordionList.forEach((item) => {
 });
 }
 initAccordion();
+
+function initScrollSuave(){
+const linksInternos = document.querySelectorAll('.js-menu a[href^="#"]');
+
+function scrollToSection(event) { 
+  event.preventDefault();
+  const href = event.currentTarget.getAttribute('href');
+  const section = document.querySelector(href);
+
+  section.scrollIntoView({
+    behavior: 'smooth',
+    block: 'start',
+  });
+}
+linksInternos.forEach((link) => {
+  link.addEventListener('click', scrollToSection);
+});
+}
+initScrollSuave();
