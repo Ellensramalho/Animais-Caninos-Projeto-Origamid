@@ -12,12 +12,13 @@
 </head>
 
 <body>
-  <div data-cor="azul" data-anima-scroll="left" data-width="500">Uma Div</div>
+  <div class ="grid-container">
   <nav class="menu js-menu">
     <ul>
       <li><a href="#animais">Animais</a></li>
       <li><a href="#faq">FAQ</a></li>
       <li><a href="#contato">Contatos</a></li>
+      <li><a data-modal="abrir" href="login.html">Login</a></li>
     </ul>
   </nav>
   <section class="grid-section animais js-scroll" id="animais">
@@ -101,6 +102,18 @@
   <footer class="copy">
     <p>© 2026 Animais Caninos. Todos os direitos reservados.</p>
   </footer>
+  </div>
+  <section class="modal-container" data-modal="container">
+    <div class = "modal">
+      <button data-modal = "fechar" class = "fechar">X</button>
+      <form action="">
+      <label for="email">Email</label>
+      <input type ="text" for="email" id="email">
+      <label for="senha">Senha</label>
+      <input type ="password" for="senha" id="senha">
+      <button type="submit">Entrar</button>
+    </div>
+  </section>
   <script src = "animacoes.js"></script>
   <script src="script.js"></script>
 
